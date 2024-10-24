@@ -4,6 +4,49 @@
   box-sizing: border-box;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+}
+
+.header img {
+  height: 65px;
+}
+
+.header a {
+  text-decoration: none;
+  background-color: #c51111;
+  width: 140px;
+  text-align: center;
+  height: 24px;
+  border-radius: 3px;
+  font-size: 1.2em;
+  color: white;
+}
+
+.header a:hover {
+  background-color: #974242;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.mascara-formulario {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
+}
+
 body {
   display: flex;
   height: 100vh;
@@ -20,15 +63,16 @@ body {
 
 .caixa-video {
   position: fixed;
-  z-index: -1;
-}
+  min-height: 100vh;
+  min-width: 100vw;
 
-video {
-  width: 100vw;
+  top: 0;
+  z-index: -1;
 }
 
 img.logo-mario {
   height: 200px;
+  margin: 100px 0 30px 0;
 }
 
 button.botao-entre-contato {
@@ -48,6 +92,7 @@ button.botao-entre-contato {
 
 button:hover {
   opacity: 0.7;
+  transition: 0.5s;
 }
 
 .img-mario-luigi {
@@ -72,4 +117,46 @@ button:hover {
   position: fixed;
   right: 25px;
   bottom: 25px;
+}
+
+.formulario-fale-conosco {
+  width: 350px;
+  height: 400px;
+  background-color: rgb(205, 197, 197);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 20%;
+  left: -350px;
+  padding: 20px;
+  border-radius: 5px;
+  gap: 12px;
+  border: none;
+}
+
+.formulario-fale-conosco button {
+  width: 200px;
+  height: 24px;
+  background-color: #c51111;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 1.3em;
+}
+
+input {
+  height: 70px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding-left: 5px;
+  outline-color: rgb(120, 216, 24);
+}
+
+textarea {
+  width: 300px;
+  height: 250px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding-left: 5px;
+  outline-color: rgb(120, 216, 24);
 }
